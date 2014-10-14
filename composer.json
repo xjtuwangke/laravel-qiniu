@@ -1,0 +1,23 @@
+{
+    "name": "xjtuwangke/laravel-qiniu",
+    "description": "",
+    "authors": [
+        {
+            "name": "xjtuwangke",
+            "email": "wangke85@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Xjtuwangke\\LaravelQiniu\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
