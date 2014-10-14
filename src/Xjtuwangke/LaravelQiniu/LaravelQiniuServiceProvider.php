@@ -1,6 +1,9 @@
 <?php namespace Xjtuwangke\LaravelQiniu;
 
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
+use Qiniu\Conf;
+use QiniuAPI\QiniuBucket;
 
 class LaravelQiniuServiceProvider extends ServiceProvider {
 
@@ -19,6 +22,10 @@ class LaravelQiniuServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('xjtuwangke/laravel-qiniu');
+		Conf::$QINIU_ACCESS_KEY = Config::get( 'laravel-qiniu::config.ACCESS_KEY' );
+		Conf::$QINIU_SECRET_KEY = Config::get( 'laravel-qiniu::config.SECRET_KEY' );
+		QiniuBucket::setDomain( Config::get( 'laravel-qiniu::config.domain' ) , Config::get( 'laravel-qiniu::config.bucket' ));
+		QiniuBucket::setPrivate( Config::get( 'laravel-qiniu::config.private' ) );
 	}
 
 	/**
