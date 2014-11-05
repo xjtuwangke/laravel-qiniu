@@ -24,12 +24,13 @@ laravel-qiniu
 
 composer update
 
-### 将 'Xjtuwangke\LaravelQiniu\LaravelQiniuServiceProvider' 加入 app/config/app.php
+### 设置laravel环境
 
+1. 将 'Xjtuwangke\LaravelQiniu\LaravelQiniuServiceProvider' 加入 app/config/app.php
 
-### publish config
+2. publish config
 
-```
+    ```
 php artisan config:publish xjtuwangke/laravel-qiniu
 ```
 
